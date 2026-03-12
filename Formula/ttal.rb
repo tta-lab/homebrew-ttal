@@ -5,21 +5,21 @@
 class Ttal < Formula
   desc "Agent infrastructure CLI - manage tasks, send messages, coordinate agents"
   homepage "https://github.com/tta-lab/ttal-cli"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tta-lab/ttal-cli/releases/download/v1.0.0/ttal_Darwin_x86_64.tar.gz"
-      sha256 "021edefa0a0593e41d7b9d6fb89c9cb5ac581fcbc32ca7efce0568c35421cf24"
+      url "https://github.com/tta-lab/ttal-cli/releases/download/v1.1.0/ttal_Darwin_x86_64.tar.gz"
+      sha256 "be6d4e9b3fb12ea8d38fe41d0f142c186a56234b422cfbd58a9caf924fec295c"
 
       define_method(:install) do
         bin.install "ttal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tta-lab/ttal-cli/releases/download/v1.0.0/ttal_Darwin_arm64.tar.gz"
-      sha256 "a81d84b5a68e155c00ce33c684e5073d019a949aeaf9548707ac4cbe946129e9"
+      url "https://github.com/tta-lab/ttal-cli/releases/download/v1.1.0/ttal_Darwin_arm64.tar.gz"
+      sha256 "c14db24a25992359c301753f5a0f783cbf3b50a772d6e2565c647c117461ed56"
 
       define_method(:install) do
         bin.install "ttal"
@@ -29,15 +29,15 @@ class Ttal < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tta-lab/ttal-cli/releases/download/v1.0.0/ttal_Linux_x86_64.tar.gz"
-      sha256 "bbbcffb0eadc0f5773cd9f747578ee7542bd2dd3100c803b74024873dff13b3f"
+      url "https://github.com/tta-lab/ttal-cli/releases/download/v1.1.0/ttal_Linux_x86_64.tar.gz"
+      sha256 "03819c5c642c0f00e0cacef5487860ef50e8e4d60826b3ba0458b314078466de"
       define_method(:install) do
         bin.install "ttal"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tta-lab/ttal-cli/releases/download/v1.0.0/ttal_Linux_arm64.tar.gz"
-      sha256 "1d18ab093b611112a8449c11e3ff7f5bdb4532ad90b23aa880e5a8bf5645fece"
+      url "https://github.com/tta-lab/ttal-cli/releases/download/v1.1.0/ttal_Linux_arm64.tar.gz"
+      sha256 "4b815939c88ffc29af3a5890d33c1ef3473badc1524f13ae7d9297f33b0c2ea0"
       define_method(:install) do
         bin.install "ttal"
       end
