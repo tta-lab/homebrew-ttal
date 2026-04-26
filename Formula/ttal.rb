@@ -5,13 +5,13 @@
 class Ttal < Formula
   desc "Agent infrastructure CLI - manage tasks, send messages, coordinate agents"
   homepage "https://github.com/tta-lab/ttal-cli"
-  version "2.7.0"
+  version "2.7.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tta-lab/ttal-cli/releases/download/v2.7.0/ttal_Darwin_x86_64.tar.gz"
-      sha256 "8d472fa3057e7e012578c960008ca219a2297b8960f05092d75742318b7f2384"
+      url "https://github.com/tta-lab/ttal-cli/releases/download/v2.7.1/ttal_Darwin_x86_64.tar.gz"
+      sha256 "1d3cec5a0c4a1bb51148cd9ce701934b8e4501c65cc32c08ff01fa24b17919a0"
 
       define_method(:install) do
         bin.install "ttal"
@@ -20,8 +20,8 @@ class Ttal < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tta-lab/ttal-cli/releases/download/v2.7.0/ttal_Darwin_arm64.tar.gz"
-      sha256 "2ba488bd8773af71846fd101f91abdf800d2e940b10d1151a16d4fd08072693c"
+      url "https://github.com/tta-lab/ttal-cli/releases/download/v2.7.1/ttal_Darwin_arm64.tar.gz"
+      sha256 "e55f06fcf7c3c773e6a4c79cfc59fe4a1ce8587c11913a180f813163f0878876"
 
       define_method(:install) do
         bin.install "ttal"
@@ -33,8 +33,8 @@ class Ttal < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tta-lab/ttal-cli/releases/download/v2.7.0/ttal_Linux_x86_64.tar.gz"
-      sha256 "e4ea22ea61331cc395c9a2998992248ec55e6be952757e055004d7f34ed4d62c"
+      url "https://github.com/tta-lab/ttal-cli/releases/download/v2.7.1/ttal_Linux_x86_64.tar.gz"
+      sha256 "8335ee40516b237c05a0069cf728b0c70606386ef5109dfed01a52892463d582"
       define_method(:install) do
         bin.install "ttal"
 
@@ -42,8 +42,8 @@ class Ttal < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tta-lab/ttal-cli/releases/download/v2.7.0/ttal_Linux_arm64.tar.gz"
-      sha256 "ed2aab1ed47086ad5e63ce20b8599f1eefdf3eec26476582b2f90fa1f6877e72"
+      url "https://github.com/tta-lab/ttal-cli/releases/download/v2.7.1/ttal_Linux_arm64.tar.gz"
+      sha256 "2dc1a72a99dfb82e1012fe0a6cebcc864089d84297da9163fd3a4e00d8adb542"
       define_method(:install) do
         bin.install "ttal"
 
