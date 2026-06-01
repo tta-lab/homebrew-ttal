@@ -5,45 +5,49 @@
 class Organon < Formula
   desc "Structure-aware tools for AI agents"
   homepage "https://github.com/tta-lab/organon"
-  version "0.1.0"
+  version "1.0.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tta-lab/organon/releases/download/v0.1.0/organon_Darwin_x86_64.tar.gz"
-      sha256 "3b5d660463389b6b2a22f723c6b4862f5d37b8977aab9625b3f959d929db140c"
+      url "https://github.com/tta-lab/organon/releases/download/v1.0.0/organon_Darwin_x86_64.tar.gz"
+      sha256 "733d12041e5291d15abae5cb173b5dfb2fa5ee2c3f88018b5bcb8c35314d454e"
 
       define_method(:install) do
         bin.install "src"
         bin.install "web"
+        bin.install "skill"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tta-lab/organon/releases/download/v0.1.0/organon_Darwin_arm64.tar.gz"
-      sha256 "380bd389b24c95d3a47a29d172a41a5a3ba986f46879086363d69125afba6203"
+      url "https://github.com/tta-lab/organon/releases/download/v1.0.0/organon_Darwin_arm64.tar.gz"
+      sha256 "3c90f0d336bbdfcd3aab7414987abf7632eb68da385f0d6a7a437ea3fbd0e1d7"
 
       define_method(:install) do
         bin.install "src"
         bin.install "web"
+        bin.install "skill"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tta-lab/organon/releases/download/v0.1.0/organon_Linux_x86_64.tar.gz"
-      sha256 "61ed5ecd481bd906461c52bf9bc35782314c5e6672a0cae696e272b80c378de7"
+      url "https://github.com/tta-lab/organon/releases/download/v1.0.0/organon_Linux_x86_64.tar.gz"
+      sha256 "259b1a59c47c1f7c4123337e97d19a5934a2cd5ac093c74ed566270bfe6ec275"
       define_method(:install) do
         bin.install "src"
         bin.install "web"
+        bin.install "skill"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tta-lab/organon/releases/download/v0.1.0/organon_Linux_arm64.tar.gz"
-      sha256 "af9d225e337c27244fc8e9ea2b168a74203428b751f9440efca7a4ea0ba48c04"
+      url "https://github.com/tta-lab/organon/releases/download/v1.0.0/organon_Linux_arm64.tar.gz"
+      sha256 "271767ddf3bdb2203f668a8aa6ef2e65ca1c0793a6ee5f59b29bc7d2f7d0c3fe"
       define_method(:install) do
         bin.install "src"
         bin.install "web"
+        bin.install "skill"
       end
     end
   end
@@ -51,5 +55,6 @@ class Organon < Formula
   test do
     system "#{bin}/src", "--help"
     system "#{bin}/web", "--help"
+    system "#{bin}/skill", "--help"
   end
 end
