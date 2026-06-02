@@ -5,13 +5,13 @@
 class Temenos < Formula
   desc "Sandbox daemon for AI agents — filesystem isolation via seatbelt and bubblewrap"
   homepage "https://github.com/tta-lab/temenos"
-  version "0.9.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tta-lab/temenos/releases/download/v0.9.0/temenos_Darwin_x86_64.tar.gz"
-      sha256 "e783ca26075ac72caebebe84e4e3b5dc15669791459f7f77e5b8fb7b22cb37ba"
+      url "https://github.com/tta-lab/temenos/releases/download/v1.0.0/temenos_Darwin_x86_64.tar.gz"
+      sha256 "3ac50b3aaf89d0db2d9cef3d378c816e9314114bfeb937087f71d1065f671c6f"
 
       define_method(:install) do
         bin.install "temenos"
@@ -19,8 +19,8 @@ class Temenos < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tta-lab/temenos/releases/download/v0.9.0/temenos_Darwin_arm64.tar.gz"
-      sha256 "4482d6e97d6c4b6b050dcfc95e7b032623216abf5a831de3661b7333b144dff2"
+      url "https://github.com/tta-lab/temenos/releases/download/v1.0.0/temenos_Darwin_arm64.tar.gz"
+      sha256 "b16d548884a2f94bf421ddc59d377f47f37806e3273c36b8cea726b1c7761a99"
 
       define_method(:install) do
         bin.install "temenos"
@@ -31,16 +31,16 @@ class Temenos < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tta-lab/temenos/releases/download/v0.9.0/temenos_Linux_x86_64.tar.gz"
-      sha256 "36d1af75d134c0e5bbe1ac62051cb5f4c5027e4b423bb35853ac778fd0f28f6d"
+      url "https://github.com/tta-lab/temenos/releases/download/v1.0.0/temenos_Linux_x86_64.tar.gz"
+      sha256 "7567408a4d88cf6c45c19394b035ca39fe40bff901eab7da65b30fe21478f237"
       define_method(:install) do
         bin.install "temenos"
         generate_completions_from_executable(bin/"temenos", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tta-lab/temenos/releases/download/v0.9.0/temenos_Linux_arm64.tar.gz"
-      sha256 "b1074ff6d2cea6ff9e9f5d2148ae24d89440694a1c63ee1d0f57a17e31742575"
+      url "https://github.com/tta-lab/temenos/releases/download/v1.0.0/temenos_Linux_arm64.tar.gz"
+      sha256 "6c6cc6b3bac1c6ef9b90d05f33591fd92badff8cf607f547c8d024a810e2179f"
       define_method(:install) do
         bin.install "temenos"
         generate_completions_from_executable(bin/"temenos", "completion")
